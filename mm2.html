@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MomFit - Pregnancy & Postpartum Fitness</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff7fb;
+    color:#333;
+}
+
+/* =========================
+   GET STARTED PAGE
+========================= */
+
+#welcome{
+    height:100vh;
+    background:linear-gradient(
+        rgba(255,105,160,.75),
+        rgba(255,77,136,.85)
+    ),
+    url("IMG_20260731_213817_043.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.welcome-content{
+    max-width:700px;
+    padding:30px;
+}
+
+.welcome-content h1{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.welcome-content h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.welcome-content p{
+    font-size:19px;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+.get-started{
+    background:white;
+    color:#ff4d88;
+    padding:18px 50px;
+    border:none;
+    border-radius:30px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.get-started:hover{
+    transform:scale(1.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   MAIN WEBSITE
+========================= */
+
+#mainWebsite{
+    display:none;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#ff6fa5;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header h1{
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffe4ef;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:70px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    width:50%;
+}
+
+.hero-text h2{
+    font-size:45px;
+    color:#ff4d88;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+button{
+    background:#ff4d88;
+    color:white;
+    padding:15px 35px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff2b73;
+}
+
+.hero-image img{
+    width:450px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+section{
+    padding:70px;
+}
+
+.title{
+    text-align:center;
+    font-size:35px;
+    color:#ff4d88;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:300px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#ff4d88;
+    margin-bottom:10px;
+}
+
+ul{
+    list-style:none;
+    font-size:20px;
+    line-height:2;
+    text-align:center;
+}
+
+.contact{
+    max-width:600px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+footer{
+    background:#ff6fa5;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .welcome-content h1{
+        font-size:50px;
+    }
+
+    .welcome-content h2{
+        font-size:25px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text{
+        width:100%;
+    }
+
+    .hero-image img{
+        width:100%;
+        margin-top:30px;
+    }
+
+    header{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav{
+        margin-top:15px;
+    }
+
+    nav a{
+        margin:5px;
+        font-size:14px;
+    }
+
+    section{
+        padding:40px 20px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     FIRST PAGE
+========================= -->
+
+<div id="welcome">
+
+    <div class="welcome-content">
+
+        <h1>MomFit</h1>
+
+        <h2>Pregnancy & Postpartum Fitness</h2>
+
+        <p>
+            Your safe journey to a healthier pregnancy,
+            stronger body and better recovery starts here.
+        </p>
+
+        <button class="get-started" onclick="startWebsite()">
+            Get Started
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     MAIN WEBSITE
+========================= -->
+
+<div id="mainWebsite">
+
+<header>
+
+    <h1>MomFit</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#exercise">Exercises</a>
+        <a href="#nutrition">Nutrition</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+
+        <h2>Healthy Pregnancy & Safe Recovery</h2>
+
+        <p>
+            Welcome to MomFit.
+            We help pregnant women and new mothers stay healthy
+            with safe exercises, healthy nutrition and
+            postpartum recovery tips.
+        </p>
+
+        <button onclick="scrollToExercise()">
+            Start Exercise
+        </button>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+        src="IMG_20260731_213817_043.jpg"
+        alt="Mom exercising">
+
+    </div>
+
+</section>
+
+
+
+<!-- EXERCISES -->
+
+<section id="exercise">
+
+    <h2 class="title">
+        Pregnancy Exercises
+    </h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <img
+            src="IMG_20260731_213805_790.jpg"
+            alt="Walking">
+
+            <h3>Walking</h3>
+
+            <p>
+                Walking improves blood circulation
+                and keeps your body active.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <img
+            src="IMG_20260731_213817_043.jpg"
+            alt="Stretching">
+
+            <h3>Stretching</h3>
+
+            <p>
+                Gentle stretching reduces pain
+                and improves flexibility.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <img
+            src="IMG_20260731_213808_299.jpg"
+            alt="Pelvic Floor">
+
+            <h3>Pelvic Floor</h3>
+
+            <p>
+                Strengthens pelvic muscles before
+                and after childbirth.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- NUTRITION -->
+
+<section id="nutrition">
+
+    <h2 class="title">
+        Healthy Nutrition
+    </h2>
+
+    <ul>
+
+        <li>🥗 Eat fresh vegetables every day</li>
+
+        <li>🍎 Eat fruits rich in vitamins</li>
+
+        <li>🥚 Include protein in every meal</li>
+
+        <li>🥛 Drink milk if recommended by your doctor</li>
+
+        <li>💧 Drink enough water every day</li>
+
+        <li>🥜 Eat healthy snacks like nuts</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2 class="title">
+        Contact Us
+    </h2>
+
+    <div class="contact">
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+            type="text"
+            placeholder="Your Name"
+            required>
+
+            <input
+            type="email"
+            placeholder="Your Email"
+            required>
+
+            <textarea
+            rows="6"
+            placeholder="Your Message"
+            required></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>MomFit</h3>
+
+    <p>
+        Healthy Pregnancy • Safe Recovery • Better Life
+    </p>
+
+    <br>
+
+    <p>
+        &copy; 2026 MomFit. All Rights Reserved.
+    </p>
+
+</footer>
+
+</div>
+
+
+
+<script>
+
+/* GET STARTED */
+
+function startWebsite(){
+
+    document.getElementById("welcome").style.display = "none";
+
+    document.getElementById("mainWebsite").style.display = "block";
+
+    window.scrollTo(0,0);
+
+}
+
+
+/* START EXERCISE */
+
+function scrollToExercise(){
+
+    document.getElementById("exercise").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* CONTACT */
+
+function sendMessage(e){
+
+    e.preventDefault();
+
+    alert("✅ Thank you! Your message has been sent.");
+
+}
+
+</script>
+
+
+</body>
+</html>
