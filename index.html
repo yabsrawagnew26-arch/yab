@@ -7,7 +7,6 @@
 <title>MomFit - Pregnancy & Postpartum Fitness</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -21,13 +20,11 @@ body{
     color:#333;
 }
 
-/* =========================
-   GET STARTED PAGE
-========================= */
-
+/* WELCOME */
 #welcome{
     height:100vh;
-    background:linear-gradient(
+    background:
+    linear-gradient(
         rgba(255,105,160,.75),
         rgba(255,77,136,.85)
     ),
@@ -73,19 +70,13 @@ body{
     font-size:20px;
     font-weight:bold;
     cursor:pointer;
-    transition:.3s;
 }
 
 .get-started:hover{
     transform:scale(1.08);
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
-
-/* =========================
-   MAIN WEBSITE
-========================= */
-
+/* MAIN */
 #mainWebsite{
     display:none;
 }
@@ -110,11 +101,6 @@ nav a{
     text-decoration:none;
     margin-left:20px;
     font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#ffe4ef;
 }
 
 .hero{
@@ -149,15 +135,11 @@ button{
     border-radius:8px;
     cursor:pointer;
     font-size:16px;
-    transition:.3s;
-}
-
-button:hover{
-    background:#ff2b73;
 }
 
 .hero-image img{
     width:450px;
+    max-width:100%;
     border-radius:20px;
     box-shadow:0 10px 20px rgba(0,0,0,.2);
 }
@@ -236,11 +218,7 @@ footer{
     margin-top:40px;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
+/* MOBILE */
 @media(max-width:768px){
 
     .welcome-content h1{
@@ -283,17 +261,12 @@ footer{
         padding:40px 20px;
     }
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     FIRST PAGE
-========================= -->
+<!-- WELCOME PAGE -->
 
 <div id="welcome">
 
@@ -316,11 +289,7 @@ footer{
 
 </div>
 
-
-
-<!-- =========================
-     MAIN WEBSITE
-========================= -->
+<!-- MAIN WEBSITE -->
 
 <div id="mainWebsite">
 
@@ -336,8 +305,6 @@ footer{
     </nav>
 
 </header>
-
-
 
 <!-- HOME -->
 
@@ -360,8 +327,7 @@ footer{
 
     </div>
 
-
-    <div class="card"
+    <div class="hero-image">
 
         <img
         src="IMG_20260731_213817_043.jpg"
@@ -371,8 +337,6 @@ footer{
 
 </section>
 
-
-
 <!-- EXERCISES -->
 
 <section id="exercise">
@@ -381,11 +345,9 @@ footer{
         Pregnancy Exercises
     </h2>
 
-
     <div class="cards">
 
-
-        <div class="card"
+        <div class="card">
 
             <img
             src="IMG_20260731_213805_790.jpg"
@@ -400,12 +362,10 @@ footer{
 
         </div>
 
-
-
         <div class="card">
 
             <img
-            src="_20260731_213817_043.jp"
+            src="IMG_20260731_213808_299.jpg"
             alt="Stretching">
 
             <h3>Stretching</h3>
@@ -417,17 +377,14 @@ footer{
 
         </div>
 
-
-
         <div class="card">
 
-
             <img
-            src="IMG_20260731_213808_299.jpg"
+            src="IMG_20260731_213805_790.jpg"
             alt="Pelvic Floor">
 
             <h3>Pelvic Floor</h3>
-            <h3>"pelvic floor"</h3>
+
             <p>
                 Strengthens pelvic muscles before
                 and after childbirth.
@@ -438,8 +395,6 @@ footer{
     </div>
 
 </section>
-
-
 
 <!-- NUTRITION -->
 
@@ -452,22 +407,15 @@ footer{
     <ul>
 
         <li>🥗 Eat fresh vegetables every day</li>
-
         <li>🍎 Eat fruits rich in vitamins</li>
-
         <li>🥚 Include protein in every meal</li>
-
         <li>🥛 Drink milk if recommended by your doctor</li>
-
         <li>💧 Drink enough water every day</li>
-
         <li>🥜 Eat healthy snacks like nuts</li>
 
     </ul>
 
 </section>
-
-
 
 <!-- CONTACT -->
 
@@ -506,8 +454,6 @@ footer{
 
 </section>
 
-
-
 <!-- FOOTER -->
 
 <footer>
@@ -528,11 +474,7 @@ footer{
 
 </div>
 
-
-
 <script>
-
-/* GET STARTED */
 
 function startWebsite(){
 
@@ -544,9 +486,6 @@ function startWebsite(){
 
 }
 
-
-/* START EXERCISE */
-
 function scrollToExercise(){
 
     document.getElementById("exercise").scrollIntoView({
@@ -554,9 +493,6 @@ function scrollToExercise(){
     });
 
 }
-
-
-/* CONTACT */
 
 function sendMessage(e){
 
@@ -568,6 +504,5 @@ function sendMessage(e){
 
 </script>
 
-
 </body>
-</html>
+</html> scrollToExercise(){ e.preventDefault();
